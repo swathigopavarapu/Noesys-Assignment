@@ -9,14 +9,8 @@ function App() {
 
 
 const style = {
-
-  border: "solid 1px #ddd",
-  top:'50px'
-
+  border: "solid 1px #ddd",  
 };
-
-
-
   const option = {
     xAxis: {
       type: 'category',
@@ -35,17 +29,20 @@ const style = {
   
   return (
     <div className="App">
-      <h1>Noesys Assignment</h1>
    <Rnd
     style={style}
+    minWidth='350px'
+    minHeight='320px'
+    bounds='window'
     default={{
       x: 0,
       y: 0,
       width: 350,
-      height: 300
+      height: 320,
     }}
-  >  
-         <ReactEcharts option={option} />
+  > 
+         <ReactEcharts 
+         option={option} />
          </Rnd>
     </div>
   );
